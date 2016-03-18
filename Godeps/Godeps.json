@@ -6,6 +6,14 @@
 	],
 	"Deps": [
 		{
+			"ImportPath": "github.com/LaynePeng/RestServer",
+			"Rev": "bd316942c8008838da82c9b5ac7be880fd953a94"
+		},
+		{
+			"ImportPath": "github.com/LaynePeng/RestServer/server",
+			"Rev": "bd316942c8008838da82c9b5ac7be880fd953a94"
+		},
+		{
 			"ImportPath": "github.com/codegangsta/cli",
 			"Comment": "1.2.0-224-gaca5b04",
 			"Rev": "aca5b047ed14d17224157c3434ea93bf6cdaadee"
