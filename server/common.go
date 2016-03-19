@@ -7,7 +7,7 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-    resp := map[string]string{"greed": "Hello, friend!", "from": "Layne"}
+    resp := map[string]string{"greet": "Hello, friend!", "from": "Layne"}
     Resp(ReturnJson(resp), w, r)
 }
 
