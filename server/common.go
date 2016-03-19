@@ -7,13 +7,16 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-    w.Header().Set("Content-Type", "application/json; charset=utf-8")
     resp := map[string]string{"greed": "Hello, friend!", "from": "Layne"}
-    
-    io.WriteString(w, returnJson(resp))
+    Resp(ReturnJson(resp), w, r)
 }
 
-func returnJson(value interface{}) (string){
+func Resp(content string, w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Content-Type", "application/json; charset=utf-8")
+    io.WriteString(w, content))
+}
+
+func ReturnJson(value interface{}) (string){
     json, _ := json.Marshal(value)
     return string(json)
 }
