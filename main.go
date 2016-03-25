@@ -37,6 +37,7 @@ func main() {
                 portStr := fmt.Sprintf(":%d", port)
                 println(fmt.Sprintf("Visit the web: http://127.0.0.1%s", portStr))
                 http.HandleFunc("/",server.Index)
+                http.HandleFunc("/test",server.Test)
                 log.Fatal(http.ListenAndServe(portStr, nil))
             },
 

@@ -11,9 +11,14 @@ func Index(w http.ResponseWriter, r *http.Request) {
     Resp(ReturnJson(resp), w, r)
 }
 
+func Test(w http.ResponseWriter, r *http.Request) {
+    resp := map[string]string{"test": "Here is a test!"}
+    Resp(ReturnJson(resp), w, r)
+}
+
 func Resp(content string, w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "application/json; charset=utf-8")
-    io.WriteString(w, content))
+    io.WriteString(w, content)
 }
 
 func ReturnJson(value interface{}) (string){
